@@ -1,0 +1,202 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #848484;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  user-select: none;
+}
+
+.Game {
+  border: 1px white solid;
+  background-color: rgb(158, 158, 158);
+}
+
+#main {
+  height: 90vh;
+  width: 60vw;
+  display: flex;
+  flex-direction: row;
+  border-radius: 4px;
+  flex-direction: column;
+}
+#main_1 {
+  flex: 1;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#title {
+  flex: 4;
+  color: white;
+  font-size: 45px;
+  margin-left: 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+#playButton,
+#pauseButton {
+  width: 20%;
+  height: 20%;
+  margin-left: 20px;
+  cursor: pointer;
+  background-image: url("../image/music_on.png");
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  background-color: aqua;
+}
+
+#manual {
+  flex: 1;
+}
+#main_2 {
+  flex: 12;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+#gameBlock,
+#startMenu,
+#gameOverUI {
+  flex: 4;
+  width: calc(70% - 4px);
+  height: calc(100% - 4px);
+  position: absolute;
+  border-radius: 4px;
+  border: none;
+  margin: 2px;
+}
+#gameBlock {
+  display: flex;
+  flex-direction: column;
+}
+#startMenu {
+  z-index: 1;
+  background-color: rgb(226, 185, 185);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 4px);
+}
+#gameOverUI{
+  z-index: 1;
+  background-color: rgba(71, 57, 57, 0.8);
+  /* display: flex; */
+  font-size: 100px;
+  align-items: center;
+  justify-content: center;
+  color: #d16565;
+  display: none;
+  flex-direction: column;
+}
+#sub {
+  flex: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: calc(30% - 10px);
+  height: calc(20% - 10px);
+  border-radius: 4px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 80px;
+}
+.numRow {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  border-radius: 4px;
+}
+.numBlock {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(68, 68, 68);
+  border-radius: 10px;
+  margin: 5px;
+  font-size: 5rem;
+  color: white;
+}
+
+.btn,
+.btn:focus {
+  position: relative;
+  min-width: 200px;
+  background-color: black;
+  border-radius: 4em;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition-duration: 0.4s;
+  padding: 10px 20px;
+  width: 30%;
+  margin: 10px;
+}
+.btn:hover {
+  background-color: #3a3a3a;
+  color: white;
+  transition-duration: 0.1s;
+}
+.btn:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  box-shadow: 0 0 10px 40px white;
+  border-radius: 4em;
+}
+.btn:active:after {
+  opacity: 1;
+  transition: 0s;
+  box-shadow: 0 0 0 0 white;
+}
+.btn:active {
+  top: 1px;
+}
+
+#ModeBtn {
+  background-color: #2c2929;
+  display: flex;
+  flex-direction: row;
+}
+#modeText {
+  flex: 1;
+}
+#modeText2 {
+  flex: 9;
+}
+#modeBox{
+  display: none;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+}
+
+.modeBtn {
+  width: 20%;
+  right: 0px;
+  position: relative;
+  margin: 2px;
+  transform: translate(200px, 10px);
+  background-color: #d16565;
+  
+}

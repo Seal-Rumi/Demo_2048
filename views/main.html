@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game 2048</title>
+    <link rel="stylesheet" href="../styles/game2048.css" />
+    <script src="../include/require.js"></script>
+    <script src="../include/jquery.js"></script>
+    <link rel="stylesheet" href="../include/jquery_ui.css" />
+    <script src="../include/jquery_ui.js"></script>
+  </head>
+
+  <body>
+    <div id="main" class="Game">
+      <audio id="bgMusic" autoplay loop>
+        <source src="../audio/Knight_of_Firmament.mp3" type="audio/mpeg" />
+      </audio>
+
+      <div id="main_1">
+        <div id="title">
+          <div>2048</div>
+          <div id="playButton"></div>
+          <!-- <div id="pauseButton">Pause</div> -->
+        </div>
+      </div>
+      <div id="main_2">
+        <div id="startMenu" class="Game">
+          <div id="startBtn" class="btn">Game Start</div>
+          <div id="ModeBtn" class="btn">
+            <!-- <div id="modeText">Mode</div> -->
+            <div id="modeText2">3x3</div>
+          </div>
+          <div id="modeBox">
+            <div id="mode3x3" class="btn modeBtn">3x3</div>
+            <div id="mode4x4" class="btn modeBtn">4x4</div>
+            <div id="mode5x5" class="btn modeBtn">5x5</div>
+          </div>
+        </div>
+        <div id="gameBlock" class="Game"></div>
+        <div id="sub" class="Game"></div>
+        <div id="gameOverUI" class="Game">
+          <div id="gameOverText">Game Over</div>
+          <div id="restartBtn" class="btn">Restart</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      require.config({
+        waitSeconds: 10,
+        baseUrl: "",
+        paths: {
+          game2048: "/src/game2048",
+          jquery: "include/jquery.js",
+          jquery_ui: "include/jquery_ui.js",
+        },
+        shim: {},
+      });
+      require(["game2048"], function ($game2048) {
+        $game2048.init(3, 3);
+        $game2048.main();
+      });
+    </script>
+  </body>
+</html>
